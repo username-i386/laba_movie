@@ -1,0 +1,158 @@
+.movieDetails {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+
+    &__poster {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        & img {
+            max-width: 400px;
+            border-radius: 20px;
+        }
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+
+        &__movieName {
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        &__movieOriginalName {
+            font-size: 24px;
+            color: #8d8b8b;
+        }
+
+        &__addToCollection {
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            cursor: pointer;
+            background: transparent;
+            max-width: 300px;
+            
+
+            & span {
+                font-size: 20px;
+                font-weight: 600;
+                transition: color .3s;
+            }
+
+            & svg {
+                transition: fill .3s;
+            }
+
+            &_active {
+                & svg, span {
+                    fill: tomato;
+                    color: tomato;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        &__discription {
+            color: #8d8b8b;
+            margin-bottom: 10px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px 0;
+
+            &__item {
+                display: flex;
+            }
+            
+            & p {
+                color: #8d8b8b;
+
+                &:first-child  {
+                    min-width: 250px;
+                }
+                &:last-child  {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    
+    &__title {
+        font-size: 48px;
+        padding: 50px 5px;
+        text-align: center;
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        width: 300px;
+        height: 2px;
+        border-radius: 15px;
+        background: tomato;
+    }
+}
+
+@media(hover: hover) {
+    .movieDetails__about__addToCollection {
+        &:hover > svg,
+        &:hover > span {
+            fill: tomato;
+            color: tomato;
+        }
+
+        &_active {
+            &:hover > svg,
+            &:hover > span {
+                fill: white;
+                color: white;
+            }
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .movieDetails {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 460px) {
+    .movieDetails {
+        &__poster {
+            & img {
+                max-width: 300px;
+            }
+        }
+    }
+
+    .movieDetails__about__info {
+        
+        &__item {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

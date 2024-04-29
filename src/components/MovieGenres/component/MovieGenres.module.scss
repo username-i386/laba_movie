@@ -1,0 +1,23 @@
+.genresListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.genresList {
+    background: #181818;
+    font-size: 24px;
+    padding: 5px;
+    width: auto;
+}
+
+@media(max-width: 425px) {
+    .genresList {
+        background: #181818;
+        font-size: 18px;
+        padding: 5px;
+        width: auto;
+    }
+}

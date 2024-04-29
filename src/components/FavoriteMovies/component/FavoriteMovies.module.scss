@@ -1,0 +1,19 @@
+.favoriteMovies {
+    padding: 10px;
+}
+
+.errorAlert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    & h2 {
+        color: #4d4646;
+    }
+}

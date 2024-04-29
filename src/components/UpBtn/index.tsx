@@ -1,0 +1,1 @@
+export { UpButton } from './component/UpBtn';

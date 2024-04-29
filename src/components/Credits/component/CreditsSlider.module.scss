@@ -1,0 +1,41 @@
+.slider {
+    max-height: 500px;
+    max-width: 1400px;
+    margin: 0 auto;
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px 0;
+    background: #75747456;
+    border-radius: 20px;
+    width: auto !important;
+    padding: 10px;
+    margin: 10px;
+
+    &__avatar {
+        width: 200px;
+        border-radius: 20px;
+    }
+
+    &__job {
+        color: #b4b4b4;
+    }
+
+    &__name {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1500px) {
+    .credits {
+        display: none;
+    }
+}

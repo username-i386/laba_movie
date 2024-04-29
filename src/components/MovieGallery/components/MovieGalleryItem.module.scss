@@ -1,0 +1,102 @@
+.movieCard {
+    max-width: 400px;
+    display: flex;
+    background: rgba(117, 116, 116, 0.337254902);
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    &__link {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px 0;
+    }
+
+    &__poster {
+        max-width: 100%;
+        border-radius: 20px;
+        width: 290px;
+        height: 435px;
+    }
+
+    &__discription {
+        color: #9c9c9c;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+    }
+
+    & footer {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 10px 0;
+    }
+
+    &__favoriteBtn {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 10px;
+        
+        & p {
+            font-size: 20px;
+            transition: .3s;
+        }
+
+        & svg {
+            transition: .3s;
+        }
+
+        &_active {
+            & p, svg {
+                color: tomato;
+                fill: tomato;
+            }
+        }
+    }
+
+    &__atributes {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 0 10px;
+    }
+
+    &__atribute {
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+    }
+    
+    
+
+    &:active {
+        opacity: 0.9;
+    }
+}
+
+@media (hover: hover) {
+    .movieCard:hover {
+        background: #0077ff9d;
+    }
+
+    .movieCard__favoriteBtn:hover * {
+        transition: .3s;
+        fill: tomato;
+        color: tomato;
+    }
+
+    .movieCard__favoriteBtn_active:hover * {
+        color: white;
+        fill: white;
+    }
+}
+

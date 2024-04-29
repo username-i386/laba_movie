@@ -1,0 +1,20 @@
+.upButton {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 999;
+    
+    & > svg {
+        transition: fill .3s;
+    }
+
+    &:active > svg {
+        fill: rgba(0, 119, 255, 0.8);
+    }
+}
+
+@media(hover: hover) {
+    .upButton:hover > svg {
+        fill: #0077FF;
+    }
+}

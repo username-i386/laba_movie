@@ -1,0 +1,1 @@
+export { FavoriteMovies } from './component/FavoriteMovies';

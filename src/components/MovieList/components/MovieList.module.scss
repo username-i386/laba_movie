@@ -1,0 +1,17 @@
+.carousel {
+    max-height: 500px;
+    max-width: 1400px !important;
+    width: 90% !important;
+    margin: 0 auto;
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+@media(max-width: 1450px) {
+    .carouselContainer {
+        display: none;
+    }
+}
