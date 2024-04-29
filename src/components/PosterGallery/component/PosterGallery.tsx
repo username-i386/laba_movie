@@ -17,7 +17,7 @@ export const PosterGallery: FC = (): ReactElement => {
 
     const dispatch = useAppDispatch();
 
-    const posters = useAppSelector(state => state.posters);
+    const posters = useAppSelector(state => state.posters.posters);
 
     const [request, setRequest] = useState<IGetMovieListParam>({
         endpoints: TOP_RATED_MOVIE_ENDPOINT,

@@ -12,7 +12,7 @@ import {
     ITransformMovieApiResponse,
 } from "../types/movieApiTypes";
 
-const TOKEN = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MjVlZjIyOTcyZDJhNDRmZTlhODdhNjA4ZWQ1ODFmOSIsInN1YiI6IjY2Mjg2YmRjMjJkZjJlMDE2NTg3MmIzMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nimJ1AAhMdxaV6KxZc8r2nWefsDr-0VbaK6AOzLXCQI';
+
 
 export const movieApi = createApi({
     reducerPath: 'movieApi',
@@ -23,13 +23,12 @@ export const movieApi = createApi({
                 url: 'genre/movie/list',
                 method: 'GET',
                 params: {
-                    // api_key: API_KEY,
                     language: 'ru'
                 },
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
         }),
@@ -38,14 +37,13 @@ export const movieApi = createApi({
                 url: `/movie/${params.endpoints}`,
                 method: 'GET',
                 params: {
-                    // api_key: API_KEY,
                     page: params.page,
                     language: 'ru'
                 },
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
             transformResponse: (response: IMovieApiResponse): ITransformMovieApiResponse => ({
@@ -58,7 +56,6 @@ export const movieApi = createApi({
                 url: `/discover/movie`,
                 method: 'GET',
                 params: {
-                    // api_key: API_KEY,
                     language: 'ru',
                     sort_by: 'popularity.desc',
                     with_genres: param.query,
@@ -67,7 +64,7 @@ export const movieApi = createApi({
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
             transformResponse: (response: IMovieApiResponse): IMovieByGenresResponse => ({
@@ -82,7 +79,6 @@ export const movieApi = createApi({
                 url: `/search/movie`,
                 method: 'GET',
                 params: {
-                    // api_key: API_KEY,
                     language: 'ru',
                     query: param.query,
                     page: param.page,
@@ -90,7 +86,7 @@ export const movieApi = createApi({
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
             transformResponse: (response: IMovieApiResponse): ITransformMovieApiResponse => ({
@@ -108,7 +104,7 @@ export const movieApi = createApi({
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
         }),
@@ -123,7 +119,7 @@ export const movieApi = createApi({
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
             transformResponse: (response: IMovieApiResponse): IMovieByGenresResponse => ({
@@ -143,7 +139,7 @@ export const movieApi = createApi({
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
             transformResponse: (response: IGetVideosByIdResponse): IGetVideosByIdTransformResponse => {
@@ -170,7 +166,7 @@ export const movieApi = createApi({
                 headers: {
                     accept: 'application/json',
                     'content-type': 'application/json',
-                    Authorization: TOKEN,
+                    Authorization: import.meta.env.VITE_REACT_API_TOKEN,
                 },
             }),
         }),

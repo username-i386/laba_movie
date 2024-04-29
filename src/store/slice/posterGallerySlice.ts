@@ -4,17 +4,22 @@ export interface IPoster {
     movieId: number
     posterUrl: string
 }
-const initialState: IPoster[] = [];
+interface IPopsterGalleryState {
+    posters: IPoster[]
+}
+const initialState: IPopsterGalleryState = {
+    posters: []
+};
 
 const posterGallerySlice = createSlice({
     name: 'posterGallery',
     initialState,
     reducers: {
-        setPosters: (state: IPoster[], action: PayloadAction<IPoster>): void => {
-            state.push(action.payload);
+        setPosters: (state: IPopsterGalleryState, action: PayloadAction<IPoster>): void => {
+            state.posters.push(action.payload);
         },
-        removePosters: (state: IPoster[]): void => {
-            state = [];
+        removePosters: (state: IPopsterGalleryState): void => {
+            state.posters = [];
         },
     },
 });

@@ -5,6 +5,8 @@ import { IGetMovieListParam } from "../../../store/types/movieApiTypes";
 import { MovieGallery } from "../../MovieGallery";
 import { Pagination } from "../../Pagination";
 import { Loader } from "../../Loader";
+import { Error } from "../../Error";
+import { DisconnectIcon } from "../../iconComponents";
 
 
 export const Trend: FC = (): ReactElement => {
@@ -18,7 +20,14 @@ export const Trend: FC = (): ReactElement => {
 
 
     if (isLoading) return <Loader />;
-    if (isError) return <h1>ERROR</h1>;
+    if (isError) {
+        return (
+            <Error
+                icon={<DisconnectIcon fill="#4d4646" height="100px" width="100px"/>}  
+                title="Ошибка загрузки данных"
+            />
+        );
+    }
     if (!data) return <h1>ERROR</h1>;
 
 
