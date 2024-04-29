@@ -1,8 +1,8 @@
 # Laba Movie
 
 ## Preview 
-Посмотреть приложение **Laba Movie** можно [здесь](https://weather-gray-five.vercel.app/).
-[![preview Zeus](https://github.com/username-i386/laba_movie/blob/main/public/preview.png)](https://weather-gray-five.vercel.app/)
+Посмотреть приложение **Laba Movie** можно [здесь](https://laba-movie.vercel.app/).
+[![preview Zeus](https://github.com/username-i386/laba_movie/blob/main/public/preview.png)](https://laba-movie.vercel.app/)
 
 ## Технологии
 ![React](https://img.shields.io/badge/React-286171?style=for-the-badge&logo=react&logoColor=#61DBFB)
