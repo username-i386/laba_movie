@@ -6,8 +6,8 @@ import { MovieGallery } from "../../MovieGallery";
 import { Pagination } from "../../Pagination";
 import { IGetMovieByQueryParam } from "../../../store/types/movieApiTypes";
 import { Loader } from "../../Loader";
-import { ErrorAlert } from "../../Error/component/Error";
 import { DisconnectIcon } from "../../iconComponents";
+import { Error } from "../../Error";
 
 
 export const MovieGenres: FC = (): ReactElement => {
@@ -60,7 +60,7 @@ export const MovieGenres: FC = (): ReactElement => {
             </div>
             {
                 isLoading ? <Loader />
-                    : isError ?  <ErrorAlert 
+                    : isError ?  <Error
                         icon={<DisconnectIcon fill="#4d4646" height="100px" width="100px"/>}  
                         title="Ошибка загрузки данных"
                     />

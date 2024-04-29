@@ -7,9 +7,9 @@ import { Pagination } from "../../components/Pagination";
 import { MovieGallery } from "../../components/MovieGallery";
 import { Clips } from "../../components/Clips";
 import { Credits } from "../../components/Credits";
-import { ErrorAlert } from "../../components/Error/component/Error";
 import { Loader } from "../../components/Loader";
 import { DisconnectIcon } from "../../components/iconComponents";
+import { Error } from "../../components/Error";
 
 
 export const MoviePage: FC = (): ReactElement => {
@@ -40,7 +40,7 @@ export const MoviePage: FC = (): ReactElement => {
     if (isLoading || isLoadingSimilar || isLoadingVideos || isLoadingCredits) return <Loader />;
     if (isError || isErrorSimilar || isErrorVideos || isErrorCreadits) {
         return (
-            <ErrorAlert 
+            <Error
                 icon={<DisconnectIcon fill="#4d4646" height="100px" width="100px"/>}  
                 title="Ошибка загрузки данных"
             />

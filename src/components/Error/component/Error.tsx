@@ -7,7 +7,7 @@ interface IErrorAlertProps {
     title: string
 }
 
-export const ErrorAlert: FC<IErrorAlertProps> = ({ icon, title }): ReactElement => {
+export const Error: FC<IErrorAlertProps> = ({ icon, title }): ReactElement => {
     return (
         <div
             className={styles.errorAlert}

@@ -8,8 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { TOP_RATED_MOVIE_ENDPOINT } from "../../../const/movieListEndpoint";
 import { useTop10MovieList } from "../hooks/useTop10MovieList";
 import { Loader } from "../../Loader";
-import { ErrorAlert } from "../../Error/component/Error";
 import { DisconnectIcon } from "../../iconComponents";
+import { Error } from "../../Error";
 
 
 interface IMovieListProps {
@@ -28,7 +28,7 @@ export const MovieList: FC<IMovieListProps> = ({ title }): ReactElement => {
     if (isLoading) return <Loader />;
     if (isError) {
         return (
-            <ErrorAlert 
+            <Error
                 icon={<DisconnectIcon fill="#4d4646" height="100px" width="100px"/>}  
                 title="Ошибка загрузки данных"
             />
@@ -42,34 +42,8 @@ export const MovieList: FC<IMovieListProps> = ({ title }): ReactElement => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
-        // variableWidth: true,
-        // scrswipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 1450,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    // variableWidth: false,
-                    // scrswipeToSlide: true,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ],
+        variableWidth: true,
+        scrswipeToSlide: true,
     };
 
     return (

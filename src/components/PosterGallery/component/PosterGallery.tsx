@@ -8,9 +8,9 @@ import { useAppSelector } from "../../../store/hooks/useAppSelector";
 import { IMAGE_BASE_URL } from "../../../const/movieImgUrl";
 import { Link } from "react-router-dom";
 import { removePosters, setPosters } from "../../../store/slice/posterGallerySlice";
-import { ErrorAlert } from "../../Error/component/Error";
 import { Loader } from "../../Loader";
 import { DisconnectIcon } from "../../iconComponents";
+import { Error } from "../../Error";
 
 
 export const PosterGallery: FC = (): ReactElement => {
@@ -79,7 +79,7 @@ export const PosterGallery: FC = (): ReactElement => {
     if (isLoading) return <Loader />;
     if (isError) {
         return (
-            <ErrorAlert 
+            <Error
                 icon={<DisconnectIcon fill="#4d4646" height="100px" width="100px"/>}  
                 title="Ошибка загрузки данных"
             />

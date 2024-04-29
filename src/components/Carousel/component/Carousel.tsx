@@ -11,8 +11,8 @@ import { NOW_PLAING_MOVIE_ENDPOINT } from "../../../const/movieListEndpoint";
 import { addMovie, removeMovie } from "../../../store/slice/favoriteMoviesSlice";
 import { useIsFavoriteMovie } from "../../../hooks/useIsFavoriteMovie";
 import { Loader } from "../../Loader";
-import { ErrorAlert } from "../../Error/component/Error";
 import { DisconnectIcon } from "../../iconComponents";
+import { Error } from "../../Error";
 
 
 export const Carousel: FC = (): ReactElement => {
@@ -67,7 +67,7 @@ export const Carousel: FC = (): ReactElement => {
     if (isLoadingGenres || isLoadingMovie) return <Loader />;
     if (isErrorMovie || isErrorGenres) {
         return (
-            <ErrorAlert 
+            <Error
                 icon={<DisconnectIcon fill="#4d4646" height="100px" width="100px"/>}  
                 title="Ошибка загрузки данных"
             />

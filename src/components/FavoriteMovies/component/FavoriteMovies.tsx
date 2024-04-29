@@ -3,7 +3,7 @@ import styles from './FavoriteMovies.module.scss';
 import { MovieGallery } from "../../MovieGallery";
 import { useAppSelector } from "../../../store/hooks/useAppSelector";
 import { ErrorIcon } from "../../iconComponents";
-import { ErrorAlert } from "../../Error/component/Error";
+import { Error } from "../../Error";
 
 
 export const FavoriteMovies: FC = (): ReactElement => {
@@ -12,7 +12,7 @@ export const FavoriteMovies: FC = (): ReactElement => {
     
     if(favoriteMovies.length === 0) {
         return (
-            <ErrorAlert 
+            <Error
                 icon={<ErrorIcon fill="#4d4646" height="100px" width="100px"/>}  
                 title="Вы еще ничего не добавили"
             />
