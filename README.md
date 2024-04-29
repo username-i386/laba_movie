@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+# Laba Movie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview 
+Посмотреть приложение **Laba Movie** можно [здесь](https://weather-gray-five.vercel.app/).
+[![preview Zeus](https://github.com/username-i386/laba_movie/blob/main/public/preview.png)](https://weather-gray-five.vercel.app/)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Технологии
+![React](https://img.shields.io/badge/React-286171?style=for-the-badge&logo=react&logoColor=#61DBFB)
+![Router Dom](https://img.shields.io/badge/React_Router_Dom-cc8384?style=for-the-badge&logo=reactrouter&logoColor=#CA4245)
+![TypeScript](https://img.shields.io/badge/TypeScript-104581?style=for-the-badge&logo=typescript&logoColor=#3178C6)
+![Redux](https://img.shields.io/badge/Redux-36197B?style=for-the-badge&logo=Redux&logoColor=violet)
+![RTK Query](https://img.shields.io/badge/RTK_Query-36197B?style=for-the-badge&logo=Redux&logoColor=violet)
+![CSS Module](https://img.shields.io/badge/CSS_Modules-000000?style=for-the-badge&logo=cssmodules&logoColor=#ffffff)
